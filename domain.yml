@@ -1,0 +1,148 @@
+version: "3.1"
+
+intents:
+  - powitanie
+  - pożegnanie
+  - potwierdzenie
+  - zaprzeczenie
+  - dobry_nastrój
+  - zły_nastrój
+  - bot_challenge
+  - pytanie_mowa
+  - pytanie_próbkowanie
+  - pytanie_formanty
+  - pytanie_crosswalidacja
+  - pytanie_parametryzacja
+  - pytanie_epoka
+  - pytanie_technologia_mowy
+  - pytanie_dźwięk
+  - pytanie_funkcje_aktywacji
+  - pytanie_przykladowe_funkcje
+  - pytanie_sieci
+  - pytanie_fonem
+  - pytanie_aparat_mowy
+  - pytanie_funkcje_kosztu
+  - pytanie_funkcje_kosztu_jakie
+  - pytanie_GMM
+  - pytanie_analiza
+  - podziękowanie
+
+responses:
+  utter_powitanie:
+  - text: "Cześć. Jak się masz?"
+
+  utter_aprobata:
+  - text: "Bardzo mnie to cieszy"
+
+  utter_pocieszenie:
+  - text: "Trzymaj na pocieszenie:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_czy_pomogło:
+  - text: "Czy to pomogło?"
+
+  utter_przykro:
+  - text: "Przykro mi, nie wiem jak inaczej mógłbym cię pocieszyć :("
+
+  utter_przedstawienie:
+  - text: "Jestem botem, którego celem jest informowanie ludzi o zagadnieniach
+  związanych z technologią mowy. Masz jakieś pytanie odnośnie tego tematu?"
+
+  utter_odpowiedź_mowa:
+  - text: "Mową nazywamy szybkie i precyzyjne przekazywanie informacji za pomocą aparatu mowy
+          odbieranych przez narząd słuchu. Za mowę i jej zrozumienie odpowiada, znajdujący się w
+          naszym mózgu, obszar Broc’a i Wernickie’go."
+
+  utter_odpowiedź_próbkowanie:
+  - text: "Sygnał mowy przenosi informacje w różnych pasmach częstotliwości. Zakłada się, że jest to
+             50 – 8000 Hz. Zgodnie z Twierdzeniem Nyquista maksymalna częstotliwość sygnału nie
+             przekracza połowy częstotliwości próbkowania. Stąd minimalna wartość częstotliwości
+             próbkowania to połowa maksymalnej częstotliwości sygnału."
+
+  utter_odpowiedź_formanty:
+  - text: "Formanty to kolejne częstotliwości, w których występują miejscowe rezonanse
+             przefiltrowanego sygnału mowy z filtrem, którym jest cały trakt głosowy. Każda głoska, czyli
+             fonem, w zależności od kontekstu między innymi głoskami ma inne położenie formantów,
+             zależne również od jej fonacji, prozodii, samego człowieka, płci, wieku, zdrowia."
+
+  utter_odpowiedź_crosswalidacja:
+  - text: "Kroswalidacja to podział danych treningowych na batche treningowe i testowe w celu
+          testowania algorytmu między sobą"
+
+  utter_odpowiedź_parametryzacja:
+  - text: "Sposoby parametryzacji sygnału mowy: 1. MFC (Mel Frequency Cepstrum); 2. MFCC (Mel
+           Frequency Cepstrum Coefficient); 3. PLP (Perceptual Linear Prediction); 4. LPC (Linear
+           Predictive Codes); 5. RASTA (RelAtive SpecTraA); 6. Współczynniki po przefiltrowaniu
+           bankiem filtrów melowych."
+
+  utter_odpowiedź_epoka:
+  - text: "Epoka treningu to zobaczenie przez sieć wszystkich danych. Trening trwa zazwyczaj kilka
+             epok"
+
+  utter_odpowiedź_technologia_mowy:
+    - text: "Dziedzina wiedzy nauk z pogranicza informatyki i językoznawstwa zajmująca się
+             zastosowaniem komputerów w komunikacji werbalnej z wykorzystaniem naturalnego języka
+             w postaci mówionej."
+
+  utter_odpowiedź_dźwięk:
+    - text: "Aby powstał dźwięk potrzebny jest układ oddechowy. Powietrze pompowane przez tchawicę
+             wpada do krtani. Tam wprawia w drganie struny głosowe. Następnie wpada do jamy
+             gardłowej, gdzie jest odpowiednio modulowany. W efekcie słyszymy konkretne głoski."
+
+  utter_odpowiedź_funkcje_aktywacji:
+  - text: "Funkcja aktywacji to (zwykle) nieliniowa funkcja, zawsze niemalejąca. Rozdziela punkty do
+           płaszczyzn kategoryzacji, pokazuje czy neuron ma się aktywować czy też nie. Umożliwia
+           Neuronowi naukę."
+
+  utter_odpowiedź_przykładowe_funkcje:
+  - text: "Przykładowe funkcje aktywacji to ReLU, sigmoida, tangens hiperboliczny, softmax."
+
+  utter_odpowiedź_sieci:
+    - text: "Sieć neuronowa to system przeznaczony do przetwarzania informacji, którego budowa i
+             zasada działania są w pewnym stopniu wzorowane na funkcjonowaniu fragmentów
+             rzeczywistego systemu neurowego. Na przesłankach biologicznych oparte są schematy"
+
+  utter_odpowiedź_fonem:
+    - text: "Fonem to podstawowa, abstrakcyjna jednostka systemu dźwiękowego języka, mająca
+             określony, minimalny zespół cech pozwalający odróżnić ją od innych takich jednostek. Zbiór
+             fonemów w danym języku tworzy alfabet fonologiczny, a realizacją fonemów w mowie są
+             głoski."
+
+  utter_odpowiedź_aparat_mowy:
+    - text: "Aparat mowy odpowiedzialny za powstawanie dźwięku obejmuje wszystko to, co znajduje się
+             w jamie ustnej i jej obrębie, a więc język, podniebienie w tym podniebienie miękkie
+             zakończone języczkiem, wargi, ruchomą żuchwę, a także dziąsła i zęby. Przy powstawaniu
+             dźwięku bierze udział także układ oddechowy składający się z płuc przepony i tchawicy, oraz
+             układ fonacyjny składający się z krtani zawierającej głośnię i fałdy głosowe."
+
+  utter_odpowiedź_funkcje_kosztu:
+    - text: "Funkcja kosztu to funkcja jaką działamy na wyjście z sieci, opisuje jak bardzo dane wyjściowe
+             różnią się od oczekiwanego wyjścia, gdyby sieć klasyfikowała idealnie"
+
+  utter_odpowiedź_funkcje_kosztu_jakie:
+    - text: "Podstawowe fukcje kosztu to RMSE czyli błąd średniokwadratowy oraz krosentropia
+             kategoryczna"
+
+  utter_odpowiedź_GMM:
+    - text: "Gaussian mixture models (GMMs) are a type of machine learning algorithm. They are used to
+             classify data into different categories based on the probability distribution"
+
+  utter_odpowiedź_analiza:
+    - text: "W ciągu 20ms ludzką mowę można uznać za sygnał stacjonarny, gdyż w ciągu 20ms nie
+             jesteśmy w stanie zmienić kształtu naszego traktu głosowego. Długość ramki powinna zatem
+             wynosić 15-20ms. Jeżeli chcemy ustalić długość ramki w próbkach to jest ona zależna od
+             częstotliwości próbkowania. I tak na przykład dla fs = 16kH, powinna wynosić 320 próbek."
+
+  utter_pozegnanie:
+  - text: "Trzymaj się"
+
+  utter_jestem_botem:
+  - text: "Jestem botem, napędzanym przez Rasa."
+
+  utter_niemazaco:
+  - text: "Nie ma za co, cieszę się, że mogłem pomóc"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

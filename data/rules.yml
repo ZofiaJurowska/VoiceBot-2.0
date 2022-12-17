@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: pozegnaj się gdy uzytkownik się pozegna
+  steps:
+  - intent: pożegnanie
+  - action: utter_pozegnanie
+
+- rule: Powiedz 'jestem botem' zawsze kiedy uzytkownik zapyta
+  steps:
+  - intent: bot_challenge
+  - action: utter_jestem_botem
+
+- rule: podziękuj za rozmowe kiedy uzytkownik skończy zadawać pytania
+  steps:
+    - intent: podziękowanie
+    - action: utter_niemazaco
