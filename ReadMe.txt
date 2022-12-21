@@ -20,3 +20,4 @@ w przypadku błedu daj znać Daniel Schnober (będziemy coś próbować poprawi�
 8. Możesz zacząć korzystać z Chat bota
 	rasa shell
 
+Przykładowa zmiana
