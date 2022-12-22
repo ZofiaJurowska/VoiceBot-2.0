@@ -1,6 +1,8 @@
 import requests
+import RunTTSbyDominik
 
 wiadomosc_bota = ""
+output_path = "TTS_PL.wav"
 historia_rozmowy = open("historia.txt", "w")
 while wiadomosc_bota != "Trzymaj się":
     wiadomosc = input("\nTwoje zapytanie:\n>")
@@ -15,5 +17,9 @@ while wiadomosc_bota != "Trzymaj się":
         else:
             wiadomosc_bota = odpowiedz['text']
         print(wiadomosc_bota)
+
+        RunTTSbyDominik.text2speech(output_path, wiadomosc_bota)
+        RunTTSbyDominik.talk2us(output_path)
+
         historia_rozmowy.write("\nBot:\n>" + wiadomosc_bota)
 historia_rozmowy.close()
