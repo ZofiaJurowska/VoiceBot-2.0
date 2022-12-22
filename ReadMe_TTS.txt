@@ -1,5 +1,5 @@
 Instrukcja instalacji oraz uruchomienia TTS:
-1. Pobierz wymagane pliki.
+1. Pobierz wymagane pliki z naszego repozytorium, oraz folder tts z https://github.com/marcinwitkowski/tm-clients
 
 2. W popranych plikach, trzeba poszukać i zmienić importy. Te które pamiętam wypiałem poniżej, jeżeli coś pominąłem to
 dopiszcie, proszę. Do zmiany:
