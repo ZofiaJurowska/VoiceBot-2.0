@@ -1,6 +1,11 @@
 version: "3.1"
 
 stories:
+#- story: szablon
+#  steps:
+#    - intent: faq
+#    - action: utter_faq
+
 - story: Technologia mowy 1
   steps:
   - intent: powitanie
@@ -8,40 +13,8 @@ stories:
   - intent: dobry_nastrój
   - action: utter_aprobata
   - action: utter_przedstawienie
-  - intent: pytanie_mowa
-  - action: utter_odpowiedź_mowa
-  - intent: pytanie_próbkowanie
-  - action: utter_odpowiedź_próbkowanie
-  - intent: pytanie_formanty
-  - action: utter_odpowiedź_formanty
-  - intent: pytanie_crosswalidacja
-  - action: utter_odpowiedź_crosswalidacja
-  - intent: pytanie_parametryzacja
-  - action: utter_odpowiedź_parametryzacja
-  - intent: pytanie_epoka
-  - action: utter_odpowiedź_epoka
-  - intent: pytanie_technologia_mowy
-  - action: utter_odpowiedź_technologia_mowy
-  - intent: pytanie_dźwięk
-  - action: utter_odpowiedź_dźwięk
-  - intent: pytanie_funkcje_aktywacji
-  - action: utter_odpowiedź_funkcje_aktywacji
-  - intent: pytanie_przykladowe_funkcje
-  - action: utter_odpowiedź_przykładowe_funkcje
-  - intent: pytanie_sieci
-  - action: utter_odpowiedź_sieci
-  - intent: pytanie_fonem
-  - action: utter_odpowiedź_fonem
-  - intent: pytanie_aparat_mowy
-  - action: utter_odpowiedź_aparat_mowy
-  - intent: pytanie_funkcje_kosztu
-  - action: utter_odpowiedź_funkcje_kosztu
-  - intent: pytanie_funkcje_kosztu_jakie
-  - action: utter_odpowiedź_funkcje_kosztu_jakie
-  - intent: pytanie_GMM
-  - action: utter_odpowiedź_GMM
-  - intent: pytanie_analiza
-  - action: utter_odpowiedź_analiza
+  - intent: faq
+  - action: utter_faq
 
 - story: Technologia mowy 2
   steps:
@@ -53,40 +26,8 @@ stories:
   - intent: potwierdzenie
   - action: utter_aprobata
   - action: utter_przedstawienie
-  - intent: pytanie_mowa
-  - action: utter_odpowiedź_mowa
-  - intent: pytanie_próbkowanie
-  - action: utter_odpowiedź_próbkowanie
-  - intent: pytanie_formanty
-  - action: utter_odpowiedź_formanty
-  - intent: pytanie_crosswalidacja
-  - action: utter_odpowiedź_crosswalidacja
-  - intent: pytanie_parametryzacja
-  - action: utter_odpowiedź_parametryzacja
-  - intent: pytanie_epoka
-  - action: utter_odpowiedź_epoka
-  - intent: pytanie_technologia_mowy
-  - action: utter_odpowiedź_technologia_mowy
-  - intent: pytanie_dźwięk
-  - action: utter_odpowiedź_dźwięk
-  - intent: pytanie_funkcje_aktywacji
-  - action: utter_odpowiedź_funkcje_aktywacji
-  - intent: pytanie_przykladowe_funkcje
-  - action: utter_odpowiedź_przykładowe_funkcje
-  - intent: pytanie_sieci
-  - action: utter_odpowiedź_sieci
-  - intent: pytanie_fonem
-  - action: utter_odpowiedź_fonem
-  - intent: pytanie_aparat_mowy
-  - action: utter_odpowiedź_aparat_mowy
-  - intent: pytanie_funkcje_kosztu
-  - action: utter_odpowiedź_funkcje_kosztu
-  - intent: pytanie_funkcje_kosztu_jakie
-  - action: utter_odpowiedź_funkcje_kosztu_jakie
-  - intent: pytanie_GMM
-  - action: utter_odpowiedź_GMM
-  - intent: pytanie_analiza
-  - action: utter_odpowiedź_analiza
+  - intent: faq
+  - action: utter_faq
 
 - story: Technologia mowy 3
   steps:
@@ -98,37 +39,5 @@ stories:
   - intent: zaprzeczenie
   - action: utter_przykro
   - action: utter_przedstawienie
-  - intent: pytanie_mowa
-  - action: utter_odpowiedź_mowa
-  - intent: pytanie_próbkowanie
-  - action: utter_odpowiedź_próbkowanie
-  - intent: pytanie_formanty
-  - action: utter_odpowiedź_formanty
-  - intent: pytanie_crosswalidacja
-  - action: utter_odpowiedź_crosswalidacja
-  - intent: pytanie_parametryzacja
-  - action: utter_odpowiedź_parametryzacja
-  - intent: pytanie_epoka
-  - action: utter_odpowiedź_epoka
-  - intent: pytanie_technologia_mowy
-  - action: utter_odpowiedź_technologia_mowy
-  - intent: pytanie_dźwięk
-  - action: utter_odpowiedź_dźwięk
-  - intent: pytanie_funkcje_aktywacji
-  - action: utter_odpowiedź_funkcje_aktywacji
-  - intent: pytanie_przykladowe_funkcje
-  - action: utter_odpowiedź_przykładowe_funkcje
-  - intent: pytanie_sieci
-  - action: utter_odpowiedź_sieci
-  - intent: pytanie_fonem
-  - action: utter_odpowiedź_fonem
-  - intent: pytanie_aparat_mowy
-  - action: utter_odpowiedź_aparat_mowy
-  - intent: pytanie_funkcje_kosztu
-  - action: utter_odpowiedź_funkcje_kosztu
-  - intent: pytanie_funkcje_kosztu_jakie
-  - action: utter_odpowiedź_funkcje_kosztu_jakie
-  - intent: pytanie_GMM
-  - action: utter_odpowiedź_GMM
-  - intent: pytanie_analiza
-  - action: utter_odpowiedź_analiza
+  - intent: faq
+  - action: utter_faq

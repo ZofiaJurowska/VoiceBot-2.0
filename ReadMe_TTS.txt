@@ -11,5 +11,12 @@ dopiszcie, proszę. Do zmiany:
         from tts.audio_player import AudioPlayer
         from tts.audio_saver import AudioSaver
         from tts.create_channel import create_channel
+    - katalog tts, plik techmo_tts_pb2_grpc.py
+	zamienić: "import techmo_tts_pb2 as techmo__tts__pb2", na "import tts.techmo_tts_pb2 as techmo__tts__pb2"
+    - katalog tts, plik audio_saver.py
+	zamienić: "import techmo_tts_pb2", na "import tts.techmo_tts_pb2"
+	oraz wszystkie: "techmo_tts_pb2", na "tts.techmo_tts_pb2"
 
-3. Przejdź do Readme_api.txt i porozmiawiaj z naszym Botem
+3. Jakby komuś pojawiał się błąd: ModuleNotFoundError: No module named 'tts.sounddevice' trzeba wpisać w terminal: pip install sounddevice  
+
+4. Przejdź do Readme_api.txt i porozmiawiaj z naszym Botem

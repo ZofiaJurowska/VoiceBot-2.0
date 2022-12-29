@@ -1,184 +1,214 @@
 version: "3.1"
 
 nlu:
-- intent: powitanie
-  examples: |
-    - hej
-    - cześć
-    - dzień dobry
-    - witaj
-    - siema
-    - dobry wieczór
-    - zaczynajmy
+  - intent: powitanie
+    examples: |
+      - hej
+      - cześć
+      - dzień dobry
+      - witaj
+      - siema
+      - dobry wieczór
+      - zaczynajmy
+      - hi
+      - hejka
 
-- intent: pożegnanie
-  examples: |
-    - do zobaczenia
-    - na razie
-    - dobranoc
-    - żegnaj
-    - pa
-    - miłego dnia
-    - do usłyszenia
-    - pa pa
-    - do potem
+  - intent: dobry_nastrój
+    examples: |
+      - doskonale
+      - dobrze
+      - wspaniale
+      - czuję się jak król
+      - czuję się dobrze
+      - uratuję świat
+      - niesamowicie dobrze
+      - bardzo dobrze
+      - idealnie
+      - ok
 
-- intent: potwierdzenie
-  examples: |
-    - tak
-    - t
-    - dokładnie
-    - wiadomo
-    - brzmi dobrze
-    - poprawnie
-    - zgadza się
+  - intent: zły_nastrój
+    examples: |
+      - miałem okropny dzień
+      - jestem smutny
+      - nie czuję się za dobrze
+      - zawiodłem się
+      - bardzo smutny
+      - smutny
+      - nieszczęśliwy
+      - nie dobrze
+      - nie za dobrze
+      - niesamowicie smutny
+      - źle
 
-- intent: zaprzeczenie
-  examples: |
-    - nie
-    - n
-    - nigdy
-    - nie sądzę
-    - nie spodobało mi się
-    - nie ma opcji
-    - nie bardzo
+  - intent: potwierdzenie
+    examples: |
+      - tak
+      - t
+      - dokładnie
+      - wiadomo
+      - brzmi dobrze
+      - poprawnie
+      - zgadza się
 
-- intent: dobry_nastrój
-  examples: |
-    - doskonale
-    - dobrze
-    - wspaniale
-    - czuję się jak król
-    - czuję się dobrze
-    - uratuję świat
-    - niesamowicie dobrze
-    - bardzo dobrze
-    - idealnie
+  - intent: zaprzeczenie
+    examples: |
+      - nie
+      - n
+      - nigdy
+      - nie sądzę
+      - nie spodobało mi się
+      - nie ma opcji
+      - nie bardzo
 
-- intent: zły_nastrój
-  examples: |
-    - miałem okropny dzień
-    - jestem smutny
-    - nie czuję się za dobrze
-    - zawiodłem się
-    - bardzo smutny
-    - jestem smutny
-    - smutny
-    - nieszczęśliwy
-    - nie dobrze
-    - nie za dobrze
-    - niesamowicie smutny
+  - intent: podziękowanie
+    examples: |
+      - Dziękuję za rozmowę.
+      - Dzięki za wytłumaczenie
+      - Dzięki
+      - Już wszystko wiem
+      - Dziękuję
 
-- intent: bot_challenge
-  examples: |
-    - jesteś botem?
-    - jesteś człowiekiem?
-    - czy rozmawiam z botem?
-    - czy rozmawiam z człowiekiem?
+  - intent: bot_challenge
+    examples: |
+      - jesteś botem?
+      - jesteś człowiekiem?
+      - czy rozmawiam z botem?
+      - czy rozmawiam z człowiekiem?
 
-- intent: pytanie_mowa
-  examples: |
-    - Czym jest mowa?
-    - Co to mowa?
-    - Jak rozumiesz pojęcie mowa?
+  - intent: pożegnanie
+    examples: |
+      - do zobaczenia
+      - na razie
+      - dobranoc
+      - żegnaj
+      - pa
+      - miłego dnia
+      - do usłyszenia
+      - pa pa
+      - do potem
 
-- intent: pytanie_próbkowanie
-  examples: |
-    - Jaka jest częstotliwość próbkowania sygnału mowy?
-    - Z jaką częstotliwością należy próbkować sygnał mowy?
-    - Ile wynosi częstotliwość próbkowania mowy?
-    - Ile wynosi częstotliwość próbkowania sygnału mowy?
+  - intent: out_of_scope
+    examples: |
+      - Jaka pogoda?
+      - Ile jest 2 + 2?
+      - Kto jest prezydentem?
+      - Jaki mamy dzisiaj dzień?
+      - Czym jest transformata fouriera?
+    
 
-- intent: pytanie_formanty
-  examples: |
-    - Czym są formanty?
-    - Co to są formanty?
-    - Opisz definicje formantu.
+  - intent: faq/mowa
+    examples: |
+      - Czym jest mowa?
+      - Co to mowa?
+      - Jak rozumiesz pojęcie mowa?
+      - mowa
 
-- intent: pytanie_crosswalidacja
-  examples: |
-    - Czym jest Kroswalidacja?
-    - Co to Kroswalidacja?
-    - Jak działa Kroswalidacja?
+  - intent: faq/próbkowanie
+    examples: |
+      - Jaka jest częstotliwość próbkowania sygnału mowy?
+      - Z jaką częstotliwością należy próbkować sygnał mowy?
+      - Ile wynosi częstotliwość próbkowania mowy?
+      - Ile wynosi częstotliwość próbkowania sygnału mowy?
+      - próbkowanie
+      - Jaka jest częstotliwość próbkowania?
 
-- intent: pytanie_parametryzacja
-  examples: |
-    - Jakie znasz sposoby parametryzacji sygnału mowy?
-    - Jak można sparametryzować sygnał mowy?
-    - Co robi się z sygnałem mowy, aby działać z nim dalej?
+  - intent: faq/formanty
+    examples: |
+      - Czym są formanty?
+      - Co to są formanty?
+      - Opisz definicje formantu.
+      - formanty
 
-- intent: pytanie_epoka
-  examples: |
-    - Czym jest epoka treningu?
-    - Co to epoka treningu?
-    - Opisz czym jest epoka treningu
+  - intent: faq/crosswalidacja
+    examples: |
+      - Czym jest Kroswalidacja?
+      - Co to Kroswalidacja?
+      - Jak działa Kroswalidacja?
+      - kroswalidacja
 
-- intent: pytanie_technologia_mowy
-  examples: |
-    - Czym jest technologia mowy?
-    - Co to technologia mowy?
-    - Czym zajmuje się technologia mowy?
+  - intent: faq/parametryzacja
+    examples: |
+      - Jakie znasz sposoby parametryzacji sygnału mowy?
+      - Jak można sparametryzować sygnał mowy?
+      - Co robi się z sygnałem mowy, aby działać z nim dalej?
+      - parametryzacja
 
-- intent: pytanie_dźwięk
-  examples: |
-    - Gdzie powstaje dźwięk?
-    - Jak to się dzieje, że mówimy?
-    - Jak wydajemy dźwięki?
+  - intent: faq/epoka
+    examples: |
+      - Czym jest epoka treningu?
+      - Co to epoka treningu?
+      - Opisz czym jest epoka treningu
+      - epoka
 
-- intent: pytanie_funkcje_aktywacji
-  examples: |
-    - Czym jest funkcja aktywacji?
-    - Co to funkcja aktywacji?
-    - Czy możesz podać definicje funkcji aktywacji?
+  - intent: faq/technologia_mowy
+    examples: |
+      - Czym jest technologia mowy?
+      - Co to technologia mowy?
+      - Czym zajmuje się technologia mowy?
+      - technologia mowy
 
-- intent: pytanie_przykladowe_funkcje
-  examples: |
-    - Jakie są przykładowe funkcje aktywacji?
-    - Wymień, proszę, kilka funkcji aktywacji?
-    - Jakie są funkcje aktywacji?
+  - intent: faq/dźwięk
+    examples: |
+      - Gdzie powstaje dźwięk?
+      - Jak to się dzieje, że mówimy?
+      - Jak wydajemy dźwięki?
+      - dźwięk
 
-- intent: pytanie_sieci
-  examples: |
-    - Czym jest sieć neuronowa?
-    - Co to sieć neuronowa?
+  - intent: faq/funkcje_aktywacji
+    examples: |
+      - Czym jest funkcja aktywacji?
+      - Co to funkcja aktywacji?
+      - Czy możesz podać definicje funkcji aktywacji?
+      - funkcja aktywacji
+      - funkcje aktywacji
 
-- intent: pytanie_fonem
-  examples: |
-    - Czym jest fonem?
-    - Co to fonem?
-    - Opisz fonem.
+  - intent: faq/przykładowe_funkcje
+    examples: |
+      - Jakie są przykładowe funkcje aktywacji?
+      - Wymień, proszę, kilka funkcji aktywacji?
+      - Jakie są funkcje aktywacji?
 
-- intent: pytanie_aparat_mowy
-  examples: |
-    - Z czego składa się aparat mowy?
-    - Czym jest narząd mowy?
-    - Co to aparat mowy?
+  - intent: faq/sieci
+    examples: |
+      - Czym jest sieć neuronowa?
+      - Co to sieć neuronowa?
+      - sieć neuronowa
 
-- intent: pytanie_funkcje_kosztu
-  examples: |
-    - Czym są funkcje kosztu?
-    - Co to funkcja kosztu?
-    - Opisz pojęcie funkcji kosztu.
+  - intent: faq/fonem
+    examples: |
+      - Czym jest fonem?
+      - Co to fonem?
+      - Opisz fonem.
+      - fonem
 
-- intent: pytanie_funkcje_kosztu_jakie
-  examples: |
-    - Jakie znasz funkcje kosztu?
-    - Jakie są popularne funkcje kosztu?
+  - intent: faq/aparat_mowy
+    examples: |
+      - Z czego składa się aparat mowy?
+      - Czym jest narząd mowy?
+      - Co to aparat mowy?
+      - aparat mowy
 
-- intent: pytanie_GMM
-  examples: |
-    - Czym są modele GMM?
-    - Co oznacza model GMM?
-    - Do czego używa się modeli GMM?
+  - intent: faq/funkcje_kosztu
+    examples: |
+      - Czym są funkcje kosztu?
+      - Co to funkcja kosztu?
+      - Opisz pojęcie funkcji kosztu.
 
-- intent: pytanie_analiza
-  examples: |
-    - Jaką długość okna stosujemy do analizy sygnału mowy?
-    - Co musimy wiedzieć przed analizą sygnału mowy?
+  - intent: faq/funkcje_kosztu_rodzaj
+    examples: |
+      - Jakie znasz funkcje kosztu?
+      - Jakie są popularne funkcje kosztu?
+      - Jakie są rodzaje funkcji kosztu?
 
-- intent: podziękowanie
-  examples: |
-    - Dziękuję za rozmowę.
-    - Dzięki za wytłumaczenie
-    - Dzięki
-    - Już wszystko wiem
+  - intent: faq/GMM
+    examples: |
+      - Czym są modele GMM?
+      - Co oznacza model GMM?
+      - Do czego używa się modeli GMM?
+
+  - intent: faq/analiza
+    examples: |
+      - Jaką długość okna stosujemy do analizy sygnału mowy?
+      - Co musimy wiedzieć przed analizą sygnału mowy?
+      - analiza sygnału
+
