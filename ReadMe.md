@@ -51,7 +51,7 @@
 <br><br> 
 ## Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
-   i plusikiem tworzymy drugi Local, w obu wpisujemy:
+   i plusikiem tworzymy drugi Local(albo prawym myszy i Split on Right) w obu wpisujemy:
     <br> `cmd`
  <br><br> 
 - Dalej rozdziele konsole na A) i B), żeby oszczędzić sobie pisania. Ale w pkt 2. aktywujemy venva
