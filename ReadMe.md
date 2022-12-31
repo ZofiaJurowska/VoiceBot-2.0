@@ -48,19 +48,21 @@
 <br><br>
 7. Wytrenuj model
 	`rasa train  `
-8. Aktywacja API:
+<br><br> 
+##Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
    i plusikiem tworzymy drugi Local, w obu wpisujemy:
-    `cmd`
+    <br> `cmd`
+ <br><br> 
 - Dalej rozdziele konsole na A) i B), żeby oszczędzić sobie pisania. Ale w pkt 2. aktywujemy venva
-    B i A) `.\venv\Scripts\activate`
-
+    <br> B i A) `.\venv\Scripts\activate`
+<br><br> 
 - Włączamy rase w konsoli A)
-    A) `rasa run --enable-api --port 5034`       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
-
+  <br>  A) `rasa run --enable-api --port 5034`       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
+<br><br> 
 - Właczamy sobie api w konsoli B)
-   B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
+   <br>B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
                                                jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac) 
-
+<br><br> 
 - Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
 venv/Lib/pydub/utils.py -> linijka 165
