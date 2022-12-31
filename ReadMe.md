@@ -49,7 +49,7 @@
 7. Wytrenuj model
 	`rasa train  `
 <br><br> 
-##Aktywacja API:
+## Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
    i plusikiem tworzymy drugi Local, w obu wpisujemy:
     <br> `cmd`
