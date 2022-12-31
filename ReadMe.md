@@ -2,7 +2,7 @@
 
 ## Do uruchomienia programu należy:
 1. Pobierz pliki z naszego reporytorium 
-2. Pobierz foldery dictation oraz tts z [repozytorium](https://github.com/marcinwitkowski/tm-clients.)
+2. Pobierz foldery dictation oraz tts z [repozytorium](https://github.com/marcinwitkowski/tm-clients)
 3. W pobranych folderach należy zmienić importy w plikach:
      <br>a) katalog dictation
     <br>
