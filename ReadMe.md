@@ -22,12 +22,12 @@
     <br> 
    -  _plik call_synthesize.py_
     <br>`import tts.techmo_tts_pb2 as techmo_tts_pb2              #alternatywa: from tts import techmo_tts_pb2
-         import tts.techmo_tts_pb2_grpc as techmo_tts_pb2_grpc    #alternatywa: jw
-         import grpc
-         import os
-         from tts.audio_player import AudioPlayer
-         from tts.audio_saver import AudioSaver
-         from tts.create_channel import create_channel`
+    <br> import tts.techmo_tts_pb2_grpc as techmo_tts_pb2_grpc    #alternatywa: jw
+    <br> import grpc
+    <br> import os
+    <br> from tts.audio_player import AudioPlayer
+    <br> from tts.audio_saver import AudioSaver
+    <br> from tts.create_channel import create_channel`
     <br>
     - _plik techmo_tts_pb2_grpc.py_
 	zamienić: "import techmo_tts_pb2 as techmo__tts__pb2", na "import tts.techmo_tts_pb2 as techmo__tts__pb2"
