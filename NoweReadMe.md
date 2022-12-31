@@ -44,14 +44,11 @@
 5. Zainstaluj potrzebne pakiety (wszytskie reqirements.tx jakie są - spróbuje połaczyć w jedno)
 	<br>`pip3 install -r requirements.txt` (bez 3, sam pip)
 <br><br> 
-6. Zainstaluj pakiet rasa
-	<br>> `pip3 install rasa`
-<br><br> 
-7. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json
+6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json
 <br><br>
-8. Wytrenuj model
+7. Wytrenuj model
 	`rasa train  `
-9. Aktywacja API:
+8. Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
    i plusikiem tworzymy drugi Local, w obu wpisujemy:
     `cmd`
@@ -63,5 +60,7 @@
 
 - Właczamy sobie api w konsoli B)
    B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
-                                               jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac)                           
+                                               jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac) 
 
+- Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
+venv/Lib/pydub/utils.py -> linijka 165
