@@ -54,14 +54,14 @@
 9. Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
    i plusikiem tworzymy drugi Local, w obu wpisujemy:
-    cmd
+    `cmd`
 - Dalej rozdziele konsole na A) i B), żeby oszczędzić sobie pisania. Ale w pkt 2. aktywujemy venva
-    B i A) .\venv\Scripts\activate
+    B i A) `.\venv\Scripts\activate`
 
 - Włączamy rase w konsoli A)
-    A) rasa run --enable-api --port 5034       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
+    A) `rasa run --enable-api --port 5034`       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
 
 - Właczamy sobie api w konsoli B)
-   B) python api_http.py                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
+   B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
                                                jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac)                           
 
