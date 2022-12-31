@@ -1,4 +1,10 @@
 /.vs
-/.venv
+/venv
 /.rasa
 /models
+/dictation
+/tts
+/addresses.json
+/historia.txt
+/Dictation.wav
+/TTS_PL.wav

@@ -19,7 +19,7 @@ def audio_input(out_path:[str or Path]="Dictation.wav", fs:int=16000, buffer:int
     stream = audio.open(format=format_audio, channels=1, rate=fs, input=True, frames_per_buffer=buffer)
     ramki = []
 
-    print("Naciśnij spacja aby nagrać. Esc - aby zatrzymać")
+    print("Naciśnij  i przytrzymaj spacje, aby nagrać. Naciśnij Enter - aby zatwierdzić wypowiedź")
     print("W zapisie")
     while True:
         try:
@@ -30,8 +30,8 @@ def audio_input(out_path:[str or Path]="Dictation.wav", fs:int=16000, buffer:int
         except:
             break
         try:
-            if keyboard.is_pressed('esc'):
-                print("Nagranie zatrzymane.")
+            if keyboard.is_pressed('enter'):
+                print("Nagranie zatwierdzone.")
                 break
         except:
             break
