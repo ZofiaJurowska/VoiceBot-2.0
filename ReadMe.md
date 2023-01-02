@@ -21,13 +21,13 @@
     <br>b) katalog tts, 
     <br> 
    -  _plik call_synthesize.py_
-    <br>`import tts.techmo_tts_pb2 as techmo_tts_pb2              #alternatywa: from tts import techmo_tts_pb2
-         import tts.techmo_tts_pb2_grpc as techmo_tts_pb2_grpc    #alternatywa: jw
-         import grpc
-         import os
-         from tts.audio_player import AudioPlayer
-         from tts.audio_saver import AudioSaver
-         from tts.create_channel import create_channel`
+    <br> import tts.techmo_tts_pb2 as techmo_tts_pb2              #alternatywa: from tts import techmo_tts_pb2
+    <br> import tts.techmo_tts_pb2_grpc as techmo_tts_pb2_grpc    #alternatywa: jw
+    <br> import grpc
+    <br> import os
+    <br> from tts.audio_player import AudioPlayer
+    <br> from tts.audio_saver import AudioSaver
+    <br> from tts.create_channel import create_channel
     <br>
     - _plik techmo_tts_pb2_grpc.py_
 	zamienić: "import techmo_tts_pb2 as techmo__tts__pb2", na "import tts.techmo_tts_pb2 as techmo__tts__pb2"
@@ -46,21 +46,26 @@
 <br><br> 
 6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json
 <br><br>
-7. Wytrenuj model
+7. Używając wersji python 3.10 w pliku _oldstr.py_ (ścieżka: venv/Lib/site-packages/past/types/oldstr.py) oraz _misc.py_ (ścieżka: venv/Lib/site-packages/past/builtins/misc.py)
+    zamiast **collections** wpisać **collections.abc**
+<br><br>
+8. Wytrenuj model
 	`rasa train  `
-8. Aktywacja API:
+<br><br> 
+## Aktywacja API:
 - Potrzebujemy 2 konsoli cmd w pycharmie (Jak poza pycharmem dziala inaczej to dajcie znac) wiec otwieramy terminal
-   i plusikiem tworzymy drugi Local, w obu wpisujemy:
-    `cmd`
+   i plusikiem tworzymy drugi Local(albo prawym myszy i Split on Right) w obu wpisujemy:
+    <br> `cmd`
+ <br><br> 
 - Dalej rozdziele konsole na A) i B), żeby oszczędzić sobie pisania. Ale w pkt 2. aktywujemy venva
-    B i A) `.\venv\Scripts\activate`
-
+    <br> B i A) `.\venv\Scripts\activate`
+<br><br> 
 - Włączamy rase w konsoli A)
-    A) `rasa run --enable-api --port 5034`       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
-
+  <br>  A) `rasa run --enable-api --port 5034`       (5034 to nr portu na jakim chcemu kominikowac sie z botem)
+<br><br> 
 - Właczamy sobie api w konsoli B)
-   B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
+   <br>B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
                                                jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac) 
-
+<br><br> 
 - Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
 venv/Lib/pydub/utils.py -> linijka 165
