@@ -1,5 +1,4 @@
 import threading
-
 import requests
 import RunTTSbyDominik
 import RunDictationByDominik
@@ -26,7 +25,7 @@ ASSETS_PATH = OUTPUT_PATH / Path(r"assets/frame0")
 
 
 global recording
-recording = True
+recording = False
 
 global stream, audio, ramki, out_path, fs, format_audio
 out_path:[str or Path]="Dictation.wav"
@@ -35,6 +34,7 @@ fs:int=16000
 format_audio = pyaudio.paInt16
 
 def record():
+    canvas.delete("jeden")
     audio = pyaudio.PyAudio()
     stream = audio.open(format=format_audio, channels=1, rate=fs, input=True, frames_per_buffer=buffer)
     ramki = []
@@ -55,16 +55,49 @@ def record():
     wiadomosc = RunDictationByDominik.asr(input_path)
     wiadomosc = wiadomosc[0]['transcript']
     historia_rozmowy.write("\nUżytkownik:\n>" + wiadomosc)
+    canvas.create_text(
+        292.0,
+        136.0,
+        anchor="nw",
+        text=wiadomosc,
+        fill="#000000",
+        font=("Inter Regular", 18 * -1),
+        width=450,
+        tags="jeden"
+    )
     global zapytanie
     zapytanie = requests.post("http://localhost:5034/webhooks/rest/webhook", json={"message": wiadomosc})
     for odpowiedz in zapytanie.json():
         if 'image' in odpowiedz.keys():
+            canvas.delete("dwa")
+            canvas.delete("trzy")
             wiadomosc_bota = odpowiedz['image']
+            canvas.create_text(
+                295.0,
+                348.0,
+                anchor="nw",
+                text=wiadomosc_bota,
+                fill="#000000",
+                font=("Inter Regular", 18 * -1),
+                width=450,
+                tags="dwa"
+            )
         else:
+            canvas.delete("dwa")
+            canvas.delete("trzy")
             wiadomosc_bota = odpowiedz['text']
             RunTTSbyDominik.text2speech(output_path, wiadomosc_bota)
             RunTTSbyDominik.talk2us(output_path)
-
+            canvas.create_text(
+                295.0,
+                348.0,
+                anchor="nw",
+                text=wiadomosc_bota,
+                fill="#000000",
+                font=("Inter Regular", 18 * -1),
+                width=450,
+                tags="trzy"
+            )
         historia_rozmowy.write("\nBot:\n>" + wiadomosc_bota)
 
 
@@ -87,7 +120,7 @@ def relative_to_assets(path: str) -> Path:
 
 
 window = Tk()
-window.title("Voice Bot by Dominik")
+window.title("Voice Bot")
 window.iconbitmap("assets/frame0/image_3.ico")
 
 window.geometry("1000x600")
@@ -118,7 +151,8 @@ image_image_2 = PhotoImage(
 image_2 = canvas.create_image(
     499.0,
     55.0,
-    image=image_image_2
+    image=image_image_2,
+    tags = "4"
 )
 
 image_image_3 = PhotoImage(
@@ -126,7 +160,8 @@ image_image_3 = PhotoImage(
 image_3 = canvas.create_image(
     130.0,
     351.0,
-    image=image_image_3
+    image=image_image_3,
+    tags="5"
 )
 
 image_image_4 = PhotoImage(
@@ -134,7 +169,8 @@ image_image_4 = PhotoImage(
 image_4 = canvas.create_image(
     520.0,
     421.0,
-    image=image_image_4
+    image=image_image_4,
+    tags="6"
 )
 
 button_image_1 = PhotoImage(
@@ -147,7 +183,7 @@ record_button = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: click_handler(),
-    relief="flat"
+    relief="flat",
 )
 record_button.place(
     x=848.0,
@@ -155,31 +191,45 @@ record_button.place(
     width=75.0,
     height=75.0
 )
-
-canvas.create_text(
-    292.0,
-    136.0,
-    anchor="nw",
-    text= wiadomosc,
-    fill="#000000",
-    font=("Inter Regular", 20 * -1)
-)
-
 canvas.create_text(
     295.0,
     348.0,
     anchor="nw",
-    text= wiadomosc_bota,
+    text="",
     fill="#000000",
-    font=("Inter Regular", 20 * -1)
+    font=("Inter Regular", 18 * -1),
+    width=500,
+    tags="jeden"
 )
+canvas.create_text(
+    295.0,
+    348.0,
+    anchor="nw",
+    text="",
+    fill="#000000",
+    font=("Inter Regular", 18 * -1),
+    width=300,
+    tags="dwa"
+)
+canvas.create_text(
+    295.0,
+    348.0,
+    anchor="nw",
+    text="",
+    fill="#000000",
+    font=("Inter Regular", 18 * -1),
+    width=300,
+    tags="trzy"
+)
+
 
 image_image_5 = PhotoImage(
     file=relative_to_assets("image_5.png"))
 image_5 = canvas.create_image(
     881.0,
     296.0,
-    image=image_image_5
+    image=image_image_5,
+    tags="7"
 )
 
 button_image_3 = PhotoImage(
@@ -199,8 +249,6 @@ button_3.place(
 )
 
 window.resizable(False, False)
-
-#while wiadomosc_bota != "Trzymaj się":
 
 window.mainloop()
 historia_rozmowy.close()
