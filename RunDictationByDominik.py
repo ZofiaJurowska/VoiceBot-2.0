@@ -12,7 +12,7 @@ from dictation.VERSION import __version__
 from argparse import ArgumentParser
 from address_provider import AddressProvider
 
-
+'''
 def audio_input(out_path:[str or Path]="Dictation.wav", fs:int=16000, buffer:int=512):
     audio = pyaudio.PyAudio()
     format_audio = pyaudio.paInt16
@@ -45,7 +45,7 @@ def audio_input(out_path:[str or Path]="Dictation.wav", fs:int=16000, buffer:int
     plik_dzwiekowy.setsampwidth(audio.get_sample_size(format_audio))
     plik_dzwiekowy.setframerate(fs)
     plik_dzwiekowy.writeframes(b''.join(ramki))
-
+'''
 def asr_args(address:str, audio_path:str):
     print("Dictation ASR gRPC client " + __version__)
 
