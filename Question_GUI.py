@@ -3,6 +3,7 @@
 # https://github.com/ParthJadhav/Tkinter-Designer
 from tkinter import Tk, Canvas, PhotoImage, Toplevel
 from pathlib import Path
+from tkPDFViewer import tkPDFViewer as pdf
 
 def questions():
     OUTPUT_PATH = Path(__file__).parent
@@ -15,20 +16,21 @@ def questions():
 
     window = Toplevel()
 
-    window.geometry("600x600")
+    window.geometry("615x865")
     window.configure(bg = "#FEECEC")
 
     canvas = Canvas(
         window,
-        bg = "#FEECEC",
-        height = 600,
-        width = 600,
-        bd = 0,
-        highlightthickness = 0,
-        relief = "ridge"
+        bg="#FEECEC",
+        height=865,
+        width=615,
+        bd=0,
+        highlightthickness=0,
+        relief="ridge"
     )
 
-    canvas.place(x = 0, y = 0)
+    canvas.place(x=0, y=0)
+    '''
     image_image_11 = PhotoImage(
         file=relative_to_assets("image_6.png"))
     image_11 = canvas.create_image(
@@ -69,6 +71,10 @@ def questions():
         text="pytania",
         fill="#000000",
         font=("HachiMaruPop Regular", 20 * -1)
-    )
+    )'''
+    v1 = pdf.ShowPdf()
+    v2 = v1.pdf_view(window, pdf_location=open("Pytania_do_Bota.pdf","r"),  width=300, height=300, bar=False)
+    v2.pack()
+
     window.resizable(False, False)
     window.mainloop()
