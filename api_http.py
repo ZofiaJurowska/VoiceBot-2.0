@@ -1,4 +1,6 @@
 import threading
+from tkinter.font import BOLD
+
 import requests
 import RunTTSbyDominik
 import RunDictationByDominik
@@ -56,13 +58,13 @@ def record():
     wiadomosc = wiadomosc[0]['transcript']
     historia_rozmowy.write("\nUżytkownik:\n>" + wiadomosc)
     canvas.create_text(
-        292.0,
-        136.0,
+        292.0*1.4/1.5,
+        136.0*1.4/1.5+20,
         anchor="nw",
         text=wiadomosc,
-        fill="#000000",
-        font=("Inter Regular", 18 * -1),
-        width=450,
+        fill="#507255",
+        font=("Century Schoolbook", 30 * -1, 'bold'),
+        width=450*1.5+30,
         tags="jeden"
     )
     global zapytanie
@@ -73,13 +75,13 @@ def record():
             canvas.delete("trzy")
             wiadomosc_bota = odpowiedz['image']
             canvas.create_text(
-                295.0,
-                348.0,
+                295.0*1.4/1.5,
+                348.0*1.4/1.5-80,
                 anchor="nw",
                 text=wiadomosc_bota,
-                fill="#000000",
-                font=("Inter Regular", 18 * -1),
-                width=450,
+                fill="#507255",
+                font=("century schoolbook", 20 * -1),
+                width=450*1.5+30,
                 tags="dwa"
             )
         else:
@@ -89,13 +91,13 @@ def record():
             RunTTSbyDominik.text2speech(output_path, wiadomosc_bota)
             RunTTSbyDominik.talk2us(output_path)
             canvas.create_text(
-                295.0,
-                348.0,
+                295.0*1.4/1.5,
+                348.0*1.4/1.5-80,
                 anchor="nw",
                 text=wiadomosc_bota,
-                fill="#000000",
-                font=("Inter Regular", 18 * -1),
-                width=450,
+                fill="#507255",
+                font=("century schoolbook", 25 * -1),
+                width=450*1.4/1.5+30,
                 tags="trzy"
             )
         historia_rozmowy.write("\nBot:\n>" + wiadomosc_bota)
@@ -123,15 +125,15 @@ window = Tk()
 window.title("Voice Bot")
 window.iconbitmap("assets/frame0/image_3.ico")
 
-window.geometry("1000x600")
+window.geometry("1400x840")
 window.configure(bg = "#FEECEC")
 
 
 canvas = Canvas(
     window,
     bg = "#FEECEC",
-    height = 600,
-    width = 1000,
+    height = 840,
+    width = 1400,
     bd = 0,
     highlightthickness = 0,
     relief = "ridge"
@@ -141,36 +143,33 @@ canvas.place(x = 0, y = 0)
 image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
-    517.0,
-    210.0,
+    775.5*1.4/1.5,
+    315.0*1.4/1.5,
     image=image_image_1
 )
 
 image_image_2 = PhotoImage(
     file=relative_to_assets("image_2.png"))
 image_2 = canvas.create_image(
-    499.0,
-    55.0,
-    image=image_image_2,
-    tags = "4"
+    749.0*1.4/1.5,
+    82.5*1.4/1.5,
+    image=image_image_2
 )
 
 image_image_3 = PhotoImage(
     file=relative_to_assets("image_3.png"))
 image_3 = canvas.create_image(
-    130.0,
-    351.0,
-    image=image_image_3,
-    tags="5"
+    194.5*1.4/1.5,
+    526.0*1.4/1.5,
+    image=image_image_3
 )
 
 image_image_4 = PhotoImage(
     file=relative_to_assets("image_4.png"))
 image_4 = canvas.create_image(
-    520.0,
-    421.0,
-    image=image_image_4,
-    tags="6"
+    780.0*1.4/1.5,
+    631.5*1.4/1.5,
+    image=image_image_4
 )
 
 button_image_1 = PhotoImage(
@@ -186,39 +185,39 @@ record_button = Button(
     relief="flat",
 )
 record_button.place(
-    x=848.0,
-    y=505.0,
-    width=75.0,
-    height=75.0
+    x=(1171.5+100)*1.4/1.5,
+    y=757.5*1.4/1.5,
+    width=112.5*1.4/1.5,
+    height=112.5*1.4/1.5
 )
 canvas.create_text(
-    295.0,
-    348.0,
+    295.0*1.4,
+    348.0*1.4,
     anchor="nw",
     text="",
     fill="#000000",
     font=("Inter Regular", 18 * -1),
-    width=500,
+    width=450,
     tags="jeden"
 )
 canvas.create_text(
-    295.0,
-    348.0,
+    295.0*1.4,
+    348.0*1.4,
     anchor="nw",
     text="",
     fill="#000000",
     font=("Inter Regular", 18 * -1),
-    width=300,
+    width=450,
     tags="dwa"
 )
 canvas.create_text(
-    295.0,
-    348.0,
+    295.0*1.4,
+    348.0*1.4,
     anchor="nw",
     text="",
     fill="#000000",
     font=("Inter Regular", 18 * -1),
-    width=300,
+    width=450,
     tags="trzy"
 )
 
@@ -226,8 +225,8 @@ canvas.create_text(
 image_image_5 = PhotoImage(
     file=relative_to_assets("image_5.png"))
 image_5 = canvas.create_image(
-    881.0,
-    296.0,
+    1322.0*1.4/1.5,
+    444.0*1.4/1.5,
     image=image_image_5,
     tags="7"
 )
@@ -242,38 +241,12 @@ button_3 = Button(
     relief="flat"
 )
 button_3.place(
-    x=950.0,
-    y=14.999999999999996,
-    width=40.0,
-    height=40.0
+    x=1425.0*1.4/1.5,
+    y=22.499999999999996*1.4/1.5,
+    width=60.0*1.4/1.5,
+    height=60.0*1.4/1.5
 )
 
 window.resizable(False, False)
-
 window.mainloop()
 historia_rozmowy.close()
-'''
-while wiadomosc_bota != "Trzymaj się":
-
-    RunDictationByDominik.audio_input()
-    wiadomosc = RunDictationByDominik.asr(input_path)
-    wiadomosc = wiadomosc[0]['transcript']
-    print(wiadomosc)
-    historia_rozmowy.write("\nUżytkownik:\n>" + wiadomosc)
-    print("...")
-    zapytanie = requests.post("http://localhost:5034/webhooks/rest/webhook", json={"message": wiadomosc})
-
-    print("Bot mowi: ")
-    for odpowiedz in zapytanie.json():
-        if 'image' in odpowiedz.keys():
-            wiadomosc_bota = odpowiedz['image']
-        else:
-            wiadomosc_bota = odpowiedz['text']
-            RunTTSbyDominik.text2speech(output_path, wiadomosc_bota)
-            RunTTSbyDominik.talk2us(output_path)
-
-        zapiszOdpowiedzBota(wiadomosc_bota)
-        print(wiadomosc_bota)
-        historia_rozmowy.write("\nBot:\n>" + wiadomosc_bota)
-historia_rozmowy.close()
-'''
