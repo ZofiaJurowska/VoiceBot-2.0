@@ -57,13 +57,13 @@ def record():
     wiadomosc = wiadomosc[0]['transcript']
     historia_rozmowy.write("\nUżytkownik:\n>" + wiadomosc)
     canvas.create_text(
-        292.0*1.4/1.5,
-        136.0*1.4/1.5+20,
+        413,
+        217,
         anchor="nw",
         text=wiadomosc,
         fill="#507255",
         font=("Century Schoolbook", 30 * -1, 'bold'),
-        width=450*1.5+30,
+        width=635,
         tags="jeden"
     )
     global zapytanie
@@ -74,13 +74,13 @@ def record():
             canvas.delete("trzy")
             wiadomosc_bota = odpowiedz['image']
             canvas.create_text(
-                295.0*1.4/1.5,
-                348.0*1.4/1.5-80,
+                413,
+                415,
                 anchor="nw",
                 text=wiadomosc_bota,
                 fill="#507255",
                 font=("century schoolbook", 20 * -1),
-                width=450*1.5+30,
+                width=635,
                 tags="dwa"
             )
         else:
@@ -90,13 +90,13 @@ def record():
             RunTTSbyDominik.text2speech(output_path, wiadomosc_bota)
             RunTTSbyDominik.talk2us(output_path)
             canvas.create_text(
-                295.0*1.4/1.5,
-                348.0*1.4/1.5-80,
+                413,
+                415,
                 anchor="nw",
                 text=wiadomosc_bota,
                 fill="#507255",
                 font=("century schoolbook", 25 * -1),
-                width=450*1.4/1.5+30,
+                width=635,
                 tags="trzy"
             )
         historia_rozmowy.write("\nBot:\n>" + wiadomosc_bota)
@@ -106,12 +106,12 @@ def click_handler():
     global recording
     if recording:
         record_button.config(image=button_image_1)
-        print("JUŻ NIE NAGRYWAM")
+        print("Zakończono nagrywanie")
         recording = False
 
     else:
         record_button.config(image=button_image_2)
-        print("JAZDA")
+        print("Rozpoczęto nagrywanie")
         recording= True
         threading.Thread(target=record).start()
 
