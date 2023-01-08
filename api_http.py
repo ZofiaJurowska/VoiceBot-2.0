@@ -1,9 +1,8 @@
 import threading
-from tkinter.font import BOLD
-
 import requests
 import RunTTSbyDominik
 import RunDictationByDominik
+import Question_GUI as q
 import pyaudio
 import wave
 from pathlib import Path
@@ -237,7 +236,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=lambda: q.questions(),
     relief="flat"
 )
 button_3.place(
