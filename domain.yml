@@ -106,7 +106,10 @@ responses:
   utter_faq/sieci:
     - text: "Sieć neuronowa to system przeznaczony do przetwarzania informacji, którego budowa i
              zasada działania są w pewnym stopniu wzorowane na funkcjonowaniu fragmentów
-             rzeczywistego systemu neurowego. Na przesłankach biologicznych oparte są schematy"
+             rzeczywistego systemu neuronowego. Na przesłankach biologicznych oparte są schematy 
+             sztucznych neuronów wchodzących w skład sieci oraz w pewnym stopniu jej struktura. 
+             Jednak schematy połączeń neuronów w sieci neuronowej są wybierane arbitralnie, a nie 
+             stanowią modelu rzeczywistych struktur nerwowych."
 
   utter_faq/fonem:
     - text: "Fonem to podstawowa, abstrakcyjna jednostka systemu dźwiękowego języka, mająca
@@ -126,7 +129,7 @@ responses:
              różnią się od oczekiwanego wyjścia, gdyby sieć klasyfikowała idealnie"
 
   utter_faq/funkcje_kosztu_rodzaj:
-    - text: "Podstawowe fukcje kosztu to RMSE czyli błąd średniokwadratowy oraz krosentropia
+    - text: "Podstawowe funkcje kosztu to RMSE czyli błąd średniokwadratowy oraz krosentropia
              kategoryczna"
 
   utter_faq/GMM:
