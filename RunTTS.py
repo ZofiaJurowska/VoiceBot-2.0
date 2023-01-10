@@ -4,6 +4,7 @@ from address_provider import AddressProvider
 from pathlib import Path
 from tts.audio_player import AudioPlayer
 from scipy.io import wavfile
+import pyttsx3 as tts
 
 
 def tts_args(address: str, output_path: [Path or str] = "TechmoTTS.wav"):
@@ -79,3 +80,10 @@ def talk2us(output_path:[Path or str] ="TTS_PL.wav"):
     glosnik.start(sampling_rate)
     glosnik.append(data)
     glosnik.stop()
+
+def no_techmo_tts(input_text:str = "Brak tekstu"):
+    newTTS = tts.init()
+    newTTS.setProperty('rate', 120)
+    newTTS.say(input_text)
+    newTTS.runAndWait()
+

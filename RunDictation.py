@@ -1,6 +1,7 @@
 import pyaudio
 import keyboard
 import wave
+import whisper
 from pathlib import Path
 from dictation.dictation_client import create_audio_stream, print_results
 from dictation.service.dictation_settings import DictationSettings
@@ -126,4 +127,11 @@ def asr(input_file: [str or Path]):
             sys.exit(1)
     return results
 
-
+def no_techmo_asr(input_file: [str or Path]):
+    results = " "
+    input_file = Path(input_file)
+    if input_file.is_file():
+        model = whisper.load_model("base")
+        results = model.transcribe("D:\STUDIA\TM\innyASRandTTS\Dictation.wav")
+        #w przyszłości można dodać jeszcze translate
+    return results
