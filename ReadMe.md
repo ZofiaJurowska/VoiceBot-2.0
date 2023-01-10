@@ -63,7 +63,7 @@ Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie pow
   na tym etapie mogą pojawić się błędy jeżeli nie wszystkie pliki mają uzupełnione ścieżki. Będą wyświetlać się linki do plików którym trzeba je uzupełnić analogicznie jak w punkcie 3. 
 <br><br> 
 - Właczamy sobie api w konsoli dopiero kiedy rasa w konsoli A zostanie w pełni uruchomiona
-   <br>B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
+   <br>B) `python main.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
                                                jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac) 
 <br><br> 
 - Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
