@@ -1,3 +1,4 @@
+
 # **VoiceBot w Rasie**
 
 ## Do uruchomienia programu należy:
@@ -46,7 +47,10 @@
 <br><br> 
 6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json w ogólnym folderze VoiceBot-2.0
 <br><br>
-7. Wytrenuj model
+7. Używając wersji python 3.10 w pliku _oldstr.py_ (ścieżka: venv/Lib/site-packages/past/types/oldstr.py) oraz _misc.py_ (ścieżka: venv/Lib/site-packages/past/builtins/misc.py)
+    zamiast **collections** wpisać **collections.abc**
+<br><br>
+8. Wytrenuj model
 	`rasa train  `
 Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie powórz czynności.
 <br><br> 
