@@ -132,6 +132,6 @@ def no_techmo_asr(input_file: [str or Path]):
     input_file = Path(input_file)
     if input_file.is_file():
         model = whisper.load_model("base")
-        results = model.transcribe("D:\STUDIA\TM\innyASRandTTS\Dictation.wav")
+        results = model.transcribe(str(input_file))
         #w przyszłości można dodać jeszcze translate
-    return results
+    return results["text"]
