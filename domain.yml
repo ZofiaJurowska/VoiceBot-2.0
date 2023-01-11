@@ -143,7 +143,7 @@ responses:
              różnią się od oczekiwanego wyjścia, gdyby sieć klasyfikowała idealnie"
 
   utter_faq/funkcje_kosztu_rodzaj:
-    - text: "Podstawowe fukcje kosztu to MSE czyli błąd średniokwadratowy oraz krosentropia
+    - text: "Podstawowe funkcje kosztu to MSE czyli błąd średniokwadratowy oraz krosentropia
              kategoryczna"
       image: "https://visualmonsters.cba.pl/wp-content/uploads/2014/11/MSE_pods.bmp?w=640"
 
