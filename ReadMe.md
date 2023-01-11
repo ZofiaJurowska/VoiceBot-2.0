@@ -1,4 +1,3 @@
-
 # **VoiceBot w Rasie**
 
 ## Do uruchomienia programu należy:
@@ -36,21 +35,22 @@
 	zamienić: "import techmo_tts_pb2", na `import tts.techmo_tts_pb2`
 	<br>oraz wszystkie: "techmo_tts_pb2", na `tts.techmo_tts_pb2`
 <br><br> 
-4. Zainstaluj i włącz środowisko wirtualne (jeżeli nie działają poniższe linijki najeży spróbować skorzystać z instrukcji w tym linku: https://code.visualstudio.com/docs/python/python-tutorial)
+4. Zainstaluj i włącz środowisko wirtualne (Przykładowe instrukcje: dla użytkowników Visual Studio:
+https://code.visualstudio.com/docs/python/python-tutorial, dla użytkowiników Pycharm: https://blog.joanna-siwiec.pl/wirtualne-srodowisko-jako-interpreter-w-pycharm/2350/)
  <br>
- <br>a) `python3 -m venv ./venv `      (bez 3, sam python)
+ <br>a) `python3 -m venv ./venv `      (jeśli nie zadziała można spróbować wpisać bez 3, sam python)
  <br>b) `.\venv\Scripts\activate `      (jeśli nie działa, bo coś on this system, securityError, to      
 `Set-ExecutionPolicy Unrestricted -Scope Process]` lub `cmd`
 <br><br> 
 5. Zainstaluj potrzebne pakiety (wszytskie reqirements.tx jakie są - spróbuje połaczyć w jedno)
-	<br>`pip3 install -r requirements.txt` (bez 3, sam pip)
+	<br>`pip3 install -r requirements.txt` (jeżeli nie zadziała, można spróbować bez 3, sam pip)
 <br><br> 
 6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json w ogólnym folderze VoiceBot-2.0
 <br><br>
-7. Używając wersji python 3.10 w pliku _oldstr.py_ (ścieżka: venv/Lib/site-packages/past/types/oldstr.py) oraz _misc.py_ (ścieżka: venv/Lib/site-packages/past/builtins/misc.py)
-    zamiast **collections** wpisać **collections.abc**
+7. Używając wersji python 3.10 w pliku oldstr.py (ścieżka: venv/Lib/site-packages/past/types/oldstr.py) oraz misc.py 
+(ścieżka: venv/Lib/site-packages/past/builtins/misc.py) zamiast collections wpisać collections.abc
 <br><br>
-8. Wytrenuj model
+9. Wytrenuj model
 	`rasa train  `
 Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie powórz czynności.
 <br><br> 
@@ -67,7 +67,7 @@ Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie pow
   na tym etapie mogą pojawić się błędy jeżeli nie wszystkie pliki mają uzupełnione ścieżki. Będą wyświetlać się linki do plików którym trzeba je uzupełnić analogicznie jak w punkcie 3. 
 <br><br> 
 - Właczamy sobie api w konsoli dopiero kiedy rasa w konsoli A zostanie w pełni uruchomiona
-   <br>B) `python main.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
+   <br>B) `python api_http.py`                      (chodzi o to, że api musi byc wywołane w tym samym srodowisku co bot,
                                                jak ktos wie jak to zrobic inaczej niz z konsoli to dajcie prosze znac) 
 <br><br> 
 - Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
