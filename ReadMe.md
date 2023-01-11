@@ -68,3 +68,5 @@ Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie pow
 <br><br> 
 - Jeżeli pojawi się problem ffmpeg należy zakomentować warn w:
 venv/Lib/pydub/utils.py -> linijka 165
+- Jeżeli chcesz korzystać z asr no techmo `pip install git+https://github.com/openai/whisper.git `
+- Jeżeli chcesz uruchomić bez dostępu do usług Techmo `python main.py --no-techmo`
