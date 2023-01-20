@@ -23,7 +23,7 @@ input_path = "Dictation.wav"
 output_path = "TTS_PL.wav"
 OUTPUT_PATH = Path(__file__).parent
 ASSETS_PATH = OUTPUT_PATH / Path(r"assets/frame0")
-link = ""
+links = []
 historia_rozmowy = open("historia.txt", "w")
 
 
@@ -46,25 +46,23 @@ def check_tts(out_path: [str or Path], output_text: str):
 
 
 def zdjecie():
-    global link
-    webbrowser.open_new_tab(link)
+    global links
+    for link in links:
+        webbrowser.open_new_tab(link)
 
 
 def image_button_state():
-    # do tej funkcji trzeba dorobić przycisk odpowiedzialny za wywołanie funkcji zdjecie() i wyswietlenie obrazka
     global is_image
     if is_image:
-        # button["state"] = NORMAL
-        print("Jest Obrazek")
+        button_4["state"] = NORMAL
         is_image = False
     else:
-        # button["state"] = DISABLED
-        print("Brak obrazka")
+        button_4["state"] = DISABLED
 
 
 def record():
     canvas.delete("jeden")
-    global historia_rozmowy, is_image, link
+    global historia_rozmowy, is_image, links
     # Nagrywanie
     buffer = 512
     fs = 16000
@@ -107,20 +105,8 @@ def record():
             canvas.delete("trzy")
             wiadomosc_bota = odpowiedz['image']
             is_image = True
-            link = wiadomosc_bota
+            links.append(wiadomosc_bota)
             image_button_state()
-            canvas.create_text(
-                                413,
-                                415,
-                                anchor="nw",
-                                text=wiadomosc_bota,
-                                fill="#507255",
-                                font=("century schoolbook", 20 * -1),
-                                width=635,
-                                tags="dwa"
-                                )
-            canvas.after(3000)
-            canvas.bind("<Button-1>", zdjecie())
 
         else:
             canvas.delete("dwa")
@@ -276,6 +262,22 @@ button_3.place(
                 width=60.0*1.4/1.5,
                 height=60.0*1.4/1.5
                 )
+
+button_image_4 = PhotoImage(file=relative_to_assets("button_4.png"))
+button_4 = Button(
+                    image=button_image_4,
+                    borderwidth=0,
+                    highlightthickness=0,
+                    command=lambda: print("button_1 clicked"),
+                    relief="flat"
+                    )
+button_4.place(
+                x=131.5,
+                y=707,
+                width=105.0,
+                height=105.0
+                )
+button_4["state"] = DISABLED
 
 window.resizable(False, False)
 window.mainloop()
