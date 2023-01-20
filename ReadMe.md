@@ -46,7 +46,16 @@
 <br><br> 
 6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json w ogólnym folderze VoiceBot-2.0
 <br><br>
-7. Wytrenuj model
+Wewnątrz paketu tkPDFViewer podmień linijki 46-48 na: <br>
+                pix = page.get_pixmap()
+                pix1 = fitz.Pixmap(pix, 0) if pix.alpha else pix
+                img = pix1.tobytes("ppm")
+<br><br>	
+7. Jeżeli w którymś z plików pojawia się błąd No module called: xxxxx 
+oraz nie da się go zainstalować z poziomu programu należy to zrobić 
+z poziomu cmd za pomocą funkcji pip install		
+<br><br>
+8. Wytrenuj model
 	`rasa train  `
 Sprawdź czy w folderze "models" pojawił się nowu plik modelu. Jeżeli nie powórz czynności.
 <br><br> 
