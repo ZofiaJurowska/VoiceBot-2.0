@@ -30,13 +30,13 @@ nlu:
     examples: |
       - miałem okropny dzień
       - jestem smutny
-      - nie czuję się za dobrze
+      - bardzo źle się czuję
       - zawiodłem się
       - bardzo smutny
       - smutny
-      - nieszczęśliwy
-      - nie dobrze
-      - nie za dobrze
+      - nieszczęśliwie
+      - samotnie
+      - kiepsko
       - niesamowicie smutny
       - źle
 
