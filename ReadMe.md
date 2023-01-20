@@ -47,9 +47,9 @@
 6. W czasie instalacji stwórz z linków zamieszczonych na upelu plik addresses.json w ogólnym folderze VoiceBot-2.0
 <br><br>
 Wewnątrz paketu tkPDFViewer podmień linijki 46-48 na: <br>
-                pix = page.get_pixmap()
-                pix1 = fitz.Pixmap(pix, 0) if pix.alpha else pix
-                img = pix1.tobytes("ppm")
+                pix = page.get_pixmap()<br>
+                pix1 = fitz.Pixmap(pix, 0) if pix.alpha else pix<br>
+                img = pix1.tobytes("ppm")<br>
 <br><br>	
 7. Jeżeli w którymś z plików pojawia się błąd No module called: xxxxx 
 oraz nie da się go zainstalować z poziomu programu należy to zrobić 
