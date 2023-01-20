@@ -268,7 +268,7 @@ button_4 = Button(
                     image=button_image_4,
                     borderwidth=0,
                     highlightthickness=0,
-                    command=lambda: print("button_1 clicked"),
+                    command=zdjecie,
                     relief="flat"
                     )
 button_4.place(
